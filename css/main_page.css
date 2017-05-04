@@ -1,0 +1,80 @@
+#videoCanvas{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#previewCanvas{
+  width: 30%;
+  max-width: 500px;
+  max-height: 580px;
+  overflow-y: scroll;
+}
+
+#videoContainer{
+  flex: 1;
+  width: 640px;
+  margin: auto;
+}
+
+#videoContainer video{
+  width: 100%;
+  height: 380px;
+}
+
+#videoContainer img{
+  position: absolute;
+  margin-top: -380px;
+  margin-left:
+}
+
+#videoContainer button{
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+}
+
+#previewCanvas img{
+  width: 95%;
+  padding-left: 5%;
+  height: auto;
+}
+
+#frameSelect{
+  flex: 1;
+  display: flex;
+}
+
+.radio-img{
+  flex: 1;
+  margin: auto;
+}
+
+.radio-img input {
+  display:none;
+}
+
+.radio-img .imgContainer{
+  width: 50px;
+  margin: auto;
+  cursor:pointer;
+}
+
+.radio-img .imgContainer img{
+  width: 100%;
+}
+
+input:checked + .imgContainer{
+  background-color: #CECECE;
+}
+
+@media (max-width: 1000px){
+  #mainPage{
+    flex-direction: column;
+  }
+
+  #previewCanvas{
+    width: 100%;
+    max-width: none;
+  }
+}

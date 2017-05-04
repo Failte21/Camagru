@@ -1,0 +1,18 @@
+#successContainer {
+  max-width: 800px;
+  min-height: 500px;
+  background-color: white;
+  flex-direction: column;
+}
+
+#successContainer{
+  text-align: center;
+}
+
+#successContainer p{
+  flex: 1;
+}
+
+#successContainer a{
+  flex: 1;
+}

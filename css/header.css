@@ -1,0 +1,47 @@
+header{
+  display: flex;
+  padding: 0 30px 0 30px;
+  /*background-color: #554236;*/
+  background-color: #00DFFC;
+  /*border-bottom: 6px solid #F77825;*/
+  border-bottom: 6px solid #00B4CC;
+}
+
+header .headerLink{
+  width: 100px;
+  padding: 0;
+  line-height: 100px;
+}
+
+header .headerLink a{
+  display: block;
+  color: #005F6B;
+  width: 100px;
+  text-align: center;
+}
+
+header #titleLink{
+  color: #005F6B;
+  flex: 1;
+  text-align: left;
+  font-size: 21pt;
+}
+
+#dropDown ul{
+  line-height: normal;
+}
+
+@media (max-width: 750px){
+
+  header{
+    flex-direction: column;
+  }
+  header .headerLink{
+    width: 100%;
+    line-height: 50px;
+  }
+
+  header .titleLink{
+    text-align: center;
+  }
+}

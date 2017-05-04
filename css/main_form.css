@@ -1,0 +1,58 @@
+#mainForm .formSection{
+  flex: 1;
+}
+
+#mainForm .formSection:nth-child(1){
+  border-right: solid 2px #005F6B;
+}
+
+#mainForm .formSection:nth-child(2){
+  border-left: solid 2px #005F6B;
+}
+
+#mainForm .formSection h2{
+  width: 100%;
+  max-width: 350px;
+  margin: 50px auto auto auto;
+  color: white;
+  font-size: 40px;
+  border-bottom: solid #005F6B 2px;
+}
+
+#mainForm .formSection form{
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+}
+
+#mainForm .formSection form input{
+  width: 100%;
+  height: 40px;
+  margin: 20px 0 20px 0;
+  border: solid #005F6B 3px;
+  background-color: white;
+}
+
+#mainForm .formSection form input[type="submit"]{
+  background-color: #00DFFC;
+  color: #005F6B;
+  border-color: white;
+  text-transform: uppercase;
+}
+
+@media (max-width: 750px){
+
+  #mainForm{
+    flex-direction: column;
+  }
+
+  #mainForm .formSection:nth-child(1){
+    border-right: none;
+    border-bottom: solid 2px #005F6B;
+  }
+
+  #mainForm .formSection:nth-child(2){
+    border-left: none;
+    border-top: solid 2px #005F6B;
+  }
+}

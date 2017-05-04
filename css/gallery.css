@@ -1,0 +1,45 @@
+#gallery{
+  max-width: 1500px;
+  width: 100%;
+  margin: auto;
+  padding: 5%;
+  /*background-color: #424242;*/
+}
+
+#gallery .galleryImgCanvas{
+  display: inline-block;
+  width: 33%;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+#gallery .galleryImgCanvas img{
+  width: 100%;
+}
+
+#gallery .galleryImgCanvas .buttonContainer{
+  display: flex;
+}
+
+#gallery .galleryImgCanvas .buttonContainer button{
+  flex: 1;
+  margin-top: -4px;
+}
+
+@media (max-width: 1200px){
+  #gallery .galleryImgCanvas{
+    width: 49%;
+  }
+}
+
+@media (max-width: 800px){
+  #gallery .galleryImgCanvas{
+    width: 99%;
+  }
+}
+
+@media (max-width: 600px){
+  #gallery .galleryImgCanvas .buttonContainer{
+    flex-direction: column;
+  }
+}
