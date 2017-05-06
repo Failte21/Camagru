@@ -3,11 +3,13 @@ footer{
   float: bottom;
   width: 100%;
   background-color: #00DFFC;
+  height: 70px;
   padding: 15px;
   text-align: center;
 }
 
 footer a{
+  text-align: 35px;
   font-size: .9em;
   letter-spacing: 1px;
   text-decoration: none;
