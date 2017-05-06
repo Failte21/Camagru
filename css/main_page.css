@@ -1,3 +1,9 @@
+#mainPage{
+  background-color: white;
+  padding: 20px 0 20px 0;
+  border: solid 2px #00DFFC;
+}
+
 #videoCanvas{
   flex: 1;
   display: flex;

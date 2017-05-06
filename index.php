@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/camagru2/css/main_form.css">
     <link rel="stylesheet" href="/camagru2/css/main_page.css">
     <link rel="stylesheet" href="/camagru2/css/subscribe_success.css">
+    <link rel="stylesheet" href="/camagru2/css/footer.css">
+    <link rel="stylesheet" href="/camagru2/css/gallery.css">
   </head>
   <body>
     <?php
@@ -24,8 +26,14 @@
           include("view/main_form.php");
         }
       }else{
-        include("view/main_page.php");
+        if (!isset($_GET['page'])){
+          include("view/main_page.php");
+        }else{
+          include("check/get_page.php");
+          include(getPage($_GET['page']));
+        }
       }
+      include("view/footer.php");
       ob_end_flush();
     ?>
   </body>

@@ -1,0 +1,16 @@
+footer{
+  position: relative;
+  float: bottom;
+  width: 100%;
+  background-color: #00DFFC;
+  padding: 15px;
+  text-align: center;
+}
+
+footer a{
+  font-size: .9em;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #005F6B;
+  text-transform: uppercase;
+}
