@@ -1,3 +1,4 @@
+<h1>Hello <?php echo $_SESSION['logged_user'] ?> !</h1>
 <main class="centerContainer" id="mainPage">
   <section id="videoCanvas">
     <div id="videoContainer">

@@ -35,5 +35,3 @@
     </form>
   </section>
 </main>
-<a href="#" class="indication">Just want to explore the gallery ?<br>
-  Click here !</a>
