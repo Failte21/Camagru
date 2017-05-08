@@ -1,0 +1,140 @@
+#comment_canvas{
+  margin: 20px 0 20px 0;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+}
+
+#comment_canvas .comment_img{
+  width: 500px;
+  margin: auto;
+}
+
+#comment_canvas img{
+  width: 100%;
+}
+
+#comment_canvas .container{
+  padding: 10px;
+  width: 750px;
+  margin: auto;
+}
+
+
+.container textarea{
+  width: 100%;
+}
+
+.container input[type="submit"]{
+  width: 100%;
+  background-color: #005F6B;
+  color: white;
+  border: solid #00DFFC 1px;
+}
+
+.container input[type="submit"]:hover{
+  background-color: #00DFFC;
+  color: #005F6B;
+  cursor: pointer;
+}
+
+.tip {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  background: transparent;
+  border: 10px solid #005F6B;
+}
+
+.tip-up {
+  top: -21px; /* Same as body margin top + border */
+  left: 10px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.dialogbox{
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #00DFFC;
+  border: 1px solid #005F6B;
+}
+
+.dialogbox b{
+  color: #005F6B;
+  text-transform: uppercase;
+}
+
+.body .message {
+  min-height: 30px;
+  border-radius: 3px;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #005F6B;
+}
+
+.shadow{
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+}
+.thumbnail img{
+  float: left;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+.before{
+  border: 1px solid #009688;
+}
+.before:before {
+  content: "";
+  border-left: 1px solid #009688;
+  position: absolute;
+  left: -12%;
+  height: 112%;
+  top: -22px;
+}
+
+.after:after {
+  content: "";
+  border-bottom: 1px solid #009688;
+  position: absolute;
+  width: 60%;
+  left: 41%;
+  top: 45%;
+}
+
+.filter .label{
+  float: left;
+  margin-top: 13px;
+  margin-right: 5px;
+}
+
+@media (max-width: 750px){
+
+  #comment_canvas{
+    margin-bottom: 100px;
+  }
+  .after:after {
+    border-bottom: none;
+    border-left: 1px solid #009688;
+    height: 50px;
+    top: -20px;
+    left: 50%;
+    width: 2px;
+    z-index: -1;
+  }
+
+  #comment_canvas .container{
+    width: 80%;
+  }
+
+  #comment_canvas .comment_img{
+    width: 80%;
+    margin: auto;
+    border: solid black 1px;
+  }
+}

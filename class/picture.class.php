@@ -30,9 +30,9 @@ Class Picture{
       $result = $qu->fetchAll();
       foreach($result as $elem){
         if ($elem['id_picture'] == $id_picture && $elem['login_like'] == $login)
-          return(1);
+          return(-1);
       }
-      return(0);
+      return(1);
     }
   }
 
@@ -52,7 +52,7 @@ Class Picture{
         }
       }
       if ($ok == 0){
-        $nb_like = $this->nb_like($id_picture);
+        $nb_like = $this->nb_like($id_pictur0e);
         $nb_like++;
         $this->update($id_picture, $login, 1, $nb_like);
         $this->notification($id_picture, $login);
@@ -72,6 +72,8 @@ Class Picture{
       $query->execute(array($id_picture, $login));
       }
     }
+    echo $id_picture;
+    echo $nb;
     $query = $db->prepare('UPDATE picture SET nb = ? WHERE id = ?');
     $query->execute(array($nb, $id_picture));
   }

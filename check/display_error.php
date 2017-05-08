@@ -9,6 +9,8 @@
         echo "The 2 passwords are differents";
       }else if ($name == "error"){
         echo "Invalid password or email";
+      }else if ($name == "wrongPwd"){
+        echo "Incorrect password";
       }
     }
   }

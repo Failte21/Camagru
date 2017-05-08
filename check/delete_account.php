@@ -6,7 +6,6 @@
     }else {
       include("../class/RegisterUser.class.php");
       $user = new RegisterUser($_SESSION['logged_user'], $_POST['password']);
-      // echo ($user->login);
       if (!$user->deleteAccount()){
         header("Location: /camagru/view/account.php?error=wrongPassword");
         unset($_SESSION[logged_user]);

@@ -1,6 +1,6 @@
 footer{
-  position: relative;
-  float: bottom;
+  position: fixed;
+  bottom: 0;
   width: 100%;
   background-color: #00DFFC;
   height: 70px;
@@ -15,4 +15,12 @@ footer a{
   text-decoration: none;
   color: #005F6B;
   text-transform: uppercase;
+}
+
+footer .pageNb{
+  display: inline-block;
+}
+
+footer p{
+  color: white;
 }

@@ -15,26 +15,36 @@
     <link rel="stylesheet" href="/camagru2/css/subscribe_success.css">
     <link rel="stylesheet" href="/camagru2/css/footer.css">
     <link rel="stylesheet" href="/camagru2/css/gallery.css">
+    <link rel="stylesheet" href="/camagru2/css/comment.css">
   </head>
   <body>
     <?php
       include("view/header.php");
+      include("check/init_db.php");
+      include("check/get_page.php");
       if (!isset($_SESSION['logged_user'])){
         if (isset($_GET['subscribe']) && $_GET['subscribe'] == "success"){
           include("view/subscribe_success.php");
+        }else if (isset($_GET['page']) && $_GET['page'] == "gallery"){
+          include(getPage($_GET['page']));
         }else{
           include("view/main_form.php");
         }
       }else{
+        include("check/page.php");
         if (!isset($_GET['page'])){
           include("view/main_page.php");
         }else{
-          include("check/get_page.php");
-          include(getPage($_GET['page']));
+          $page = htmlentities($_GET['page']);
+          include(getPage($page));
         }
       }
-      include("view/footer.php");
+      if (!isset($_SESSION['logged_user']) || isset($_GET['page'])){
+        include("view/footer.php");
+      }
       ob_end_flush();
     ?>
+    <script type="text/javascript" src="js/like.js"></script>
+    <script type="text/javascript" src="js/delete_picture.js"></script>
   </body>
 </html>

@@ -9,15 +9,15 @@
       $actif = $row['actif'];
     }
     if ($actif == '1'){
-      header("Location: ../view/validation.php?result=already_actif");
+      header("Location: ../index.php?subscribe=already_activated");
     }else{
       if ($cle == $clebdd){
-        header("Location: ../view/validation.php?result=account_activated");
+        header("Location: ../index.php/subscribe=activated");
         $stmt = $db->prepare("UPDATE user SET actif = 1 WHERE login like :login ");
         $stmt->bindParam(':login', $login);
         $stmt->execute();
       }else
-        header("Location: ../view/validation.php?result=error");
+        header("Location: ../index.php?subscribe=error");
     }
   }
 ?>
