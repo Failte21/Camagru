@@ -32,7 +32,9 @@
         }
       }else{
         include("check/page.php");
-        if (!isset($_GET['page'])){
+        if (isset($_GET['subscribe'])){
+          include("view/subscribe_success.php");
+        }else if (!isset($_GET['page'])){
           include("view/main_page.php");
         }else{
           $page = htmlentities($_GET['page']);

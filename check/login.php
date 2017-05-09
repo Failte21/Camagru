@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include("../check/init_db.php");
   include('../class/RegisterUser.class.php');
   if(isset($_POST['login']) && isset($_POST['password'])){
     if ($db = initDb()){

@@ -15,6 +15,8 @@
       echo "This account is already activated";
     }else if ($result == "activated"){
       echo ("Your account is now activated");
+    }else if($result == "passwordChangeSuccess"){
+      echo "Your password has been updated";
     }else{
       echo "An error occured";
     }
