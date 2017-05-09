@@ -1,11 +1,26 @@
+<?php
+  if (isset($_SESSION['image'])){
+    $image = $_SESSION['image'];
+    unset($_SESSION['image']);
+  }
+?>
 <h1>Hello <?php echo $_SESSION['logged_user'] ?> !</h1>
 <main class="centerContainer" id="mainPage">
   <section id="videoCanvas">
     <div id="frameDiv">
-      <div id="videoContainer">
+      <div id ="videoContainer">
+        <?php if (isset($image)){
+          ?><img src="img/uploads/tmp<?php echo $image ?>"
+          alt="" class="hidden"> <?php
+        } ?>
         <canvas width=640 height=480 class="hidden"></canvas>
         <button type="button" name="button" class="hidden" id="clickPicture"
-          onclick="clickPicture(this)">
+          onclick="clickPicture(this,
+            <?php if(isset($image)){
+              echo "1";
+            }else{
+              echo "0";
+            }?>)">
           CLICK
         </button>
         <div id="saveButtons" class="hidden">
@@ -16,10 +31,32 @@
             DON'T SAVE
           </button>
         </div>
-        <video></video>
-        <img src="/camagru2/img/frames/banana.png" alt="frame" class="hidden"/>
+        <?php if (!isset($image)){
+          ?><video></video><?php
+        } ?>
+        <img src="" alt="frame" class="hidden" />
       </div>
-      <button type="button" name="button">UPLOAD</button>
+      <form id="uploadForm" action="check/upload.php" method="post"
+        enctype="multipart/form-data">
+        <!-- <input type="hidden" name="MAX_FILE_SIZE" value="10000000"> -->
+        <input type="hidden" name="MAX_FILE_SIZE" value="100000000000000000">
+        <div class="uploadButton">
+          <input type="file" name="fileToUpload" class="clickable"
+            onchange="prepareUpload()">
+          <label for="file">
+            <img src="img/icons/uploadBlue.png" alt="uploadImg">
+            Upload a picture
+          </label>
+        </div>
+        <div class="uploadButton">
+          <input type="submit" name="send" value="Send" class="unclickable">
+          <label for="submit">
+            Send the file
+          </label>
+        </div>
+        <!-- <input type="submit" name="envoyer" value="Envoyer le fichier"> -->
+      </form>
+      <!-- <button type="button" name="button">UPLOAD</button> -->
       <div id="frameSelect">
         <label class="radio-img">
           <input type="radio" name="img"  class="frame_radio" value="viking"
@@ -71,6 +108,11 @@
   </section>
 </main>
 <script type="text/javascript" src="js/select_frame.js"></script>
-<script type="text/javascript" src="js/video.js"></script>
+<?php if (!isset($image)){
+  ?><script type="text/javascript" src="js/video.js"></script><?php
+}else{
+  ?><script type="text/javascript" src="js/displayUpload.js"></script><?php
+} ?>
 <script type="text/javascript" src="js/click_picture.js"></script>
 <script type="text/javascript" src="js/save_picture.js"></script>
+<script type="text/javascript" src="js/prepareUpload.js"></script>

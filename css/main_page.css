@@ -43,6 +43,7 @@
   top: 0;
   right: 0;
   z-index: 1;
+  transform: scaleX(-1);
 }
 
 #videoContainer img{
@@ -108,6 +109,48 @@
 
 .displayed{
   display: block;
+}
+
+#uploadForm{
+  height: 50px;
+  width: 100%;
+  display: flex;
+}
+
+.uploadButton{
+  flex:1;
+  position: relative;
+}
+
+.uploadButton input{
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  border: solid black 1px;
+}
+
+.uploadButton input + label{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.uploadButton input[type="submit"] + label{
+  text-align: center;
+  line-height: 75px;
+  background-color: green;
+  color: white;
+}
+
+.uploadButton input[type="file"] + label{
+  background-color: #00DFFC;
+  color: #005F6B;
+}
+
+.uploadButton input[type="file"] + label img{
+  width: 30px;
+  margin: 10px 10px 0 50px;
 }
 
 #previewCanvas img{

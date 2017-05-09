@@ -98,3 +98,11 @@ body{
   text-align: center;
   color: #EC3434;
 }
+
+.clickable:hover{
+  cursor: pointer;
+}
+
+.unclickable + label{
+  opacity: 0.3;
+}
