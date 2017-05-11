@@ -13,8 +13,12 @@
       $this->login = htmlentities($login);
     }
 
+    function passSecured(){
+      return (strlen($this->p1) > 7);
+    }
+
     function checkPass(){
-      return $this->p1 == $this->p2;
+      return ($this->p1 == $this->p2);
     }
 
     function checkMail($db){
@@ -24,6 +28,7 @@
       while ($elem = $query->fetch())
         $i++;
       return $i == 0;
+
     }
 
     function checkLogin($db){

@@ -13,5 +13,6 @@ function deletePicture(button, id){
   if (confirm("Delete the picture ?")){
     var toRemove = button.parentNode;
     removeDb(id);
+    // toRemove.remove();
   }
 }
