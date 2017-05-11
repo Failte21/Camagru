@@ -1,26 +1,4 @@
-function displayTick(icon, color){
-  icon.setAttribute("class", "displayed");
-  icon.setAttribute("src", "img/icons/tick_" + color + ".png");
-}
-
-function check(icon, len, condition){
-  if (condition){
-    displayTick(icon, "green");
-  }else if (!len){
-    icon.setAttribute("class", "hidden");
-  }else{
-    displayTick(icon, "red");
-  }
-  return (condition);
-}
-
-function confirmOkay(password, confirm){
-  var icon = document.getElementById("signUpConfirmIcon");
-
-  return (check(icon, confirm.length, confirm == password));
-}
-
-function passOkay(password, confirm, minSize){
+function signUpPassOkay(password, confirm, minSize){
   var icon = document.getElementById("signUpPasswordIcon");
 
   if (check(icon, password.length,
@@ -35,16 +13,22 @@ function passOkay(password, confirm, minSize){
   }
 }
 
-function loginOkay(login, minSize){
-  var icon = document.getElementById("signUpLoginIcon");
+function confirmOkay(password, confirm){
+  var icon = document.getElementById("signUpConfirmIcon");
 
-  return (check(icon, login.length, login.length > minSize));
+  return (check(icon, confirm.length, confirm == password));
 }
 
 function emailOkay(email, minSize){
   var icon = document.getElementById("signUpEmailIcon");
 
   return (check(icon, email.length, email.length > minSize));
+}
+
+function SignUpLoginOkay(login, minSize){
+  var icon = document.getElementById("signUpLoginIcon");
+
+  return (check(icon, login.length, login.length > minSize));
 }
 
 function checkSignUpForm(){
@@ -55,8 +39,8 @@ function checkSignUpForm(){
   var submit = document.getElementsByName("submit")[1];
   var total = 0;
 
-  total = loginOkay(login.value, 4) + emailOkay(email.value, 4)
-    + passOkay(password.value, confirm, 7) + confirmOkay(password.value, confirm.value);
+  total = signUploginOkay(login.value, 4) + emailOkay(email.value, 4)
+    + signUpPassOkay(password.value, confirm, 7) + confirmOkay(password.value, confirm.value);
   if (total == 4){
     submit.setAttribute("class", "submitable");
   }else{
