@@ -14,11 +14,19 @@
             }
           ?>
           </h4>
-          <input type="password" name="oldpwd" placeHolder="Old password" required>
-          <input type="password" name="newpwd" placeHolder="New password" required>
-          <input type="password" name="confirmation"
+          <div class="inputContainer">
+            <input type="password" name="oldpwd" placeHolder="Old password" required>
+          </div>
+          <div class="inputContainer">
+            <input type="password" name="newpwd" placeHolder="New password" required>
+          </div>
+          <div class="inputContainer">
+            <input type="password" name="confirmation"
             placeHolder="Confirm new password" required>
-          <input type="submit" name="submit" value="Change password">
+          </div>
+          <div class="inputContainer">
+            <input type="submit" name="submit" value="Change password">
+          </div>
         </form>
       </section>
       <section class="formSection">
@@ -31,8 +39,12 @@
         ?>
         </h4>
         <form  action="/camagru2/check/delete_account.php" method="post">
+          <div class="inputContainer">
             <input type="password" name="password" placeHolder="Password" required>
+          </div>
+          <div class="inputContainer">
             <input type="submit" name="submit" value="Delete account">
+          </div>
         </form>
       </section>
     </main>
