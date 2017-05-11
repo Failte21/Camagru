@@ -11,6 +11,13 @@ function insertPicture(canvas){
   var frameName = getFrameName();
   var ob = new XMLHttpRequest();
   var data = canvas.toDataURL('img/png');
+
+  ob.onreadystatechange = function() {
+    if (ob.readyState == 4 && (ob.status == 200 || ob.status == 0)) {
+      location.reload();
+	  }
+  };
+
   ob.open("POST", "check/save_picture.php");
   ob.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
   ob.send("img=" + encodeURIComponent(data) + "&frame=" + frameName);
@@ -43,7 +50,6 @@ function save(action){
   var canvas = document.querySelector("#videoContainer canvas");
   if (action == "save"){
     insertPicture(canvas);
-    location.reload();
   }
   reset(canvas);
 }
