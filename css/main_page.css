@@ -33,7 +33,7 @@
 }
 
 #videoContainer canvas{
-  background-color: blue;
+  /*background-color: blue;*/
   z-index: 10000;
 }
 
