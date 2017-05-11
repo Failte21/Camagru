@@ -16,7 +16,7 @@ function signUpPassOkay(password, confirm, minSize){
 function confirmOkay(password, confirm){
   var icon = document.getElementById("signUpConfirmIcon");
 
-  return (check(icon, confirm.length, confirm == password));
+  return (check(icon, confirm.length, confirm == password && password.length > 0));
 }
 
 function emailOkay(email, minSize){
