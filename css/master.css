@@ -18,6 +18,7 @@ a{
 
 input{
   padding-left: 10px;
+  background-color: white;
 }
 
 input:focus{
@@ -100,6 +101,18 @@ body{
 }
 
 .clickable:hover{
+  cursor: pointer;
+}
+
+.unsubmitable{
+  opacity: 0.3;
+}
+
+.submitable{
+  opacity: 1;
+}
+
+.submitable:hover{
   cursor: pointer;
 }
 
