@@ -20,8 +20,10 @@ function checkSignInForm(){
   total = signInLoginOkay(login.value, 4) + signInpassOkay(password.value, 7);
   if (total == 2){
     submit.setAttribute("class", "submitable");
+    submit.removeAttribute("disabled");
   }else{
     submit.setAttribute("class", "unsubmitable");
+    submit.setAttribute("disabled", "disabled");
   }
 }
 

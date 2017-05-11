@@ -1,5 +1,6 @@
 <?php
   session_start();
+  header("Location: ../index.php");
   include("../class/User.class.php");
   include("init_db.php");
   if (isset($_POST['email']) && isset($_POST['password'])
@@ -7,12 +8,14 @@
   {
     $user = new User($_POST['email'], $_POST['password'], $_POST['confirm'], $_POST['login']);
     if ($db = initDb()){
+      if (!$user->passSecured())
+        $_SESSION['signUpError'] = "unsafePass";
       if (!$user->checkPass())
-        header("Location: ../index.php?signup_error=different_passwd");
+        $_SESSION['signUpError'] = "different_passwd";
       else if (!$user->checkMail($db))
-          header("Location: ../index.php?signup_error=mail_exists");
+        $_SESSION['signUpError'] = "mail_exists";
       else if (!$user->checkLogin($db))
-        header("Location: ../index.php?signup_error=login_exists");
+        $_SESSION['signUpError'] = "login_exists";
       else {
         header("Location: ../index.php?subscribe=success");
         $query = $db->prepare('insert into user(email, password, login, cle) values(:email, :password, :login, :cle)');

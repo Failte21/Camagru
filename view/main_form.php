@@ -1,4 +1,13 @@
-<?php include("check/display_error.php") ?>
+<?php
+  include("check/display_error.php");
+  if (isset($_SESSION['signInError'])){
+    $signInError = $_SESSION['signInError'];
+    unset($_SESSION['signInError']);
+  }else if (isset($_SESSION['signUpError'])){
+    $signUpError = $_SESSION['signUpError'];
+    unset($_SESSION['signUpError']);
+  }
+?>
 
 <h1>Welcome to camagru</h1>
 <main class="centerContainer" id="mainForm">
@@ -7,8 +16,8 @@
     <form action="/camagru2/check/login.php" method="post" id="signInForm">
       <h4 class="error">
       <?php
-        if (isset($_GET['login_error'])){
-          displayError($_GET['login_error']);
+        if (isset($signInError)){
+          displayError($signInError);
         }
       ?>
       </h4>
@@ -23,7 +32,7 @@
         <img src="" class="hidden" id="signInPasswordIcon">
       </div>
       <div class="inputContainer">
-        <input type="submit" name="submit" value="Log in" class="unclickable">
+        <input type="submit" name="submit" value="Log in" class="unclickable" disabled>
       </div>
     </form>
   </section>
@@ -31,8 +40,8 @@
     <h2>Sign up</h2>
     <h4 class="error">
     <?php
-      if (isset($_GET['signup_error'])){
-        displayError($_GET['signup_error']);
+      if (isset($signUpError)){
+        displayError($signUpError);
       }
     ?>
     </h4>
@@ -56,10 +65,8 @@
           <img src="" class="hidden" id="signUpConfirmIcon">
         </div>
         <div class="inputContainer">
-          <input type="submit" name="submit" value="Sign up" class="unsubmitable">
+          <input type="submit" name="submit" value="Sign up" class="unsubmitable" disabled>
         </div>
     </form>
-    <script type="text/javascript" src="js/checkSignInForm.js"></script>
-    <script type="text/javascript" src="js/checkSignUpForm.js"></script>
   </section>
 </main>

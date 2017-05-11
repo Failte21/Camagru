@@ -25,7 +25,7 @@ function emailOkay(email, minSize){
   return (check(icon, email.length, email.length > minSize));
 }
 
-function SignUpLoginOkay(login, minSize){
+function signUpLoginOkay(login, minSize){
   var icon = document.getElementById("signUpLoginIcon");
 
   return (check(icon, login.length, login.length > minSize));
@@ -39,11 +39,13 @@ function checkSignUpForm(){
   var submit = document.getElementsByName("submit")[1];
   var total = 0;
 
-  total = signUploginOkay(login.value, 4) + emailOkay(email.value, 4)
+  total = signUpLoginOkay(login.value, 4) + emailOkay(email.value, 4)
     + signUpPassOkay(password.value, confirm, 7) + confirmOkay(password.value, confirm.value);
   if (total == 4){
+    submit.removeAttribute("disabled");
     submit.setAttribute("class", "submitable");
   }else{
     submit.setAttribute("class", "unsubmitable");
+    submit.setAttribute("disabled", "disabled");
   }
 }
