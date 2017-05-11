@@ -5,7 +5,9 @@ function displayPicture(action){
   }else{
     var toDraw = document.querySelector("#videoContainer img");
   }
-  canvas.getContext("2d").drawImage(toDraw, 0, 0);
+  ctx = canvas.getContext("2d");
+  ctx.scale(-1, 1)
+  ctx.drawImage(toDraw, 0, 0, -640, 480);
   toDraw.setAttribute("class", "hidden");
   canvas.setAttribute("class", "displayed");
 }
