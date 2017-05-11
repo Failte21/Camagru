@@ -22,7 +22,8 @@ function confirmOkay(password, confirm){
 function emailOkay(email, minSize){
   var icon = document.getElementById("signUpEmailIcon");
 
-  return (check(icon, email.length, email.length > minSize));
+  return (check(icon, email.length, email.length > minSize
+    && /.+?@.+?\..{2,}/.test(email)));
 }
 
 function signUpLoginOkay(login, minSize){
