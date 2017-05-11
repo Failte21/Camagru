@@ -30,7 +30,7 @@
           }
         ?>
         </h4>
-        <form  action="check/delete_account.php" method="post">
+        <form  action="/camagru2/check/delete_account.php" method="post">
             <input type="password" name="password" placeHolder="Password" required>
             <input type="submit" name="submit" value="Delete account">
         </form>

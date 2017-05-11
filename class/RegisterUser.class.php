@@ -29,9 +29,9 @@
       return (false);
     }
 
-    function deleteAccount(){
-      if ($db = initDb())
-      {
+    function deleteAccount($db){
+      // if ($db = initDb())
+      // {
         $query = $db->prepare('SELECT password FROM user WHERE login = ?');
         $query->execute(array($this->login));
         $result = $query->fetchAll();
@@ -43,7 +43,7 @@
           }
         }
         return false;
-      }
+      //}
     }
   }
 ?>
