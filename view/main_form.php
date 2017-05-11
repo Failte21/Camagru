@@ -68,5 +68,8 @@
           <input type="submit" name="submit" value="Sign up" class="unsubmitable" disabled>
         </div>
     </form>
+    <script type="text/javascript" src="js/formChecking.js"></script>
+    <script type="text/javascript" src="js/checkSignInForm.js"></script>
+    <script type="text/javascript" src="js/checkSignUpForm.js"></script>
   </section>
 </main>
