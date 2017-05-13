@@ -31,6 +31,7 @@
           onkeyup="checkSignInForm()">
         <img src="" class="hidden" id="signInPasswordIcon">
       </div>
+      <a href="index.php?page=resetPassword">Password forgotten ?</a>
       <div class="inputContainer">
         <input type="submit" name="submit" value="Log in" class="unclickable" disabled>
       </div>

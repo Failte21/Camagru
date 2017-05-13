@@ -25,6 +25,14 @@
   margin: auto;
 }
 
+#mainForm .formSection form a{
+  color: white;
+}
+
+#mainForm .formSection form a:hover{
+  text-decoration: underline;
+}
+
 .inputContainer{
   background-color: white;
   position: relative;

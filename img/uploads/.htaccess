@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "protected page"
-AuthUserFile "/opt/lampp/htdocs/camagru2/img/uploads/.htpasswd"
-Require valid-user

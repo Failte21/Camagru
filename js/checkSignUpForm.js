@@ -19,7 +19,7 @@ function confirmOkay(password, confirm){
   return (check(icon, confirm.length, confirm == password && password.length > 0));
 }
 
-function emailOkay(email, minSize){
+function signUpEmailOkay(email, minSize){
   var icon = document.getElementById("signUpEmailIcon");
 
   return (check(icon, email.length, email.length > minSize
@@ -40,7 +40,7 @@ function checkSignUpForm(){
   var submit = document.getElementsByName("submit")[1];
   var total = 0;
 
-  total = signUpLoginOkay(login.value, 4) + emailOkay(email.value, 4)
+  total = signUpLoginOkay(login.value, 4) + signUpEmailOkay(email.value, 4)
     + signUpPassOkay(password.value, confirm, 7) + confirmOkay(password.value, confirm.value);
   if (total == 4){
     submit.removeAttribute("disabled");

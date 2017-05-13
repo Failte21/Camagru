@@ -23,10 +23,11 @@
       include("check/init_db.php");
       include("check/get_page.php");
       if (!isset($_SESSION['logged_user'])){
-        if (isset($_GET['subscribe']) && $_GET['subscribe'] == "success"){
+        if (isset($_GET['subscribe'])){
           include("view/subscribe_success.php");
-        }else if (isset($_GET['page']) && $_GET['page'] == "gallery"){
-          include(getPage($_GET['page']));
+        }else if (isset($_GET['page'])){
+          $page = htmlentities($_GET['page']);
+          include(getPage($page));
         }else{
           include("view/main_form.php");
         }

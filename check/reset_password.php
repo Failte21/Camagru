@@ -1,7 +1,8 @@
 <?php
+  header("location: ../index.php?page=resetPassword");
+  session_start();
   include('init_db.php');
   include('../class/User.class.php');
-  session_start();
   if ($db = initDb()){
     $user = new User($_POST['email'], null, null, null);
     if (!$user->checkMail($db)){
@@ -14,9 +15,11 @@
       http://localhost/camagru/view/new_pass.php?cle=".urlencode($row['cle'])."
       ---------------
       Ceci est un mail automatique, Merci de ne pas y répondre.");
-      header("Location: ../view/forgotten_pass.php?result=mail_sent");
+      header("location: ../index.php?subscribe=resetSuccess");
     }else{
-      header("Location: ../view/forgotten_pass.php?result=unknown_mail");
+      $_SESSION['resetPassError'] = "This mail doesn't exists";
     }
+  }else{
+    $_SESSION['resetPassError'] = "An error occured";
   }
 ?>

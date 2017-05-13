@@ -8,9 +8,10 @@
       }
     }else if ($page == "settings"){
       return ("view/settings.php");
-    }
-    else{
-      return ("index.php");
+    }else if ($page == "resetPassword"){
+      return ("view/resetPassword.php");
+    }else{
+      header("location: ../index.php");
     }
   }
 ?>

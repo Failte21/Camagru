@@ -17,6 +17,8 @@
       echo ("Your account is now activated");
     }else if($result == "passwordChangeSuccess"){
       echo "Your password has been updated";
+    }else if ($result == "resetSuccess"){
+      echo "A mail has been send with a link to reset your password";
     }else{
       echo "An error occured";
     }
