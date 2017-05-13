@@ -4,31 +4,9 @@
     ?>
     <h1><?php echo $_SESSION['logged_user'] ?></h1>
     <main class="centerContainer" id="mainForm">
-      <section class="formSection">
-        <h2>Change your password</h2>
-        <form action="check/change_password.php" method="post">
-          <h4 class="error">
-          <?php
-            if (isset($_GET['passwordChangeError'])){
-              displayError($_GET['passwordChangeError']);
-            }
-          ?>
-          </h4>
-          <div class="inputContainer">
-            <input type="password" name="oldpwd" placeHolder="Old password" required>
-          </div>
-          <div class="inputContainer">
-            <input type="password" name="newpwd" placeHolder="New password" required>
-          </div>
-          <div class="inputContainer">
-            <input type="password" name="confirmation"
-            placeHolder="Confirm new password" required>
-          </div>
-          <div class="inputContainer">
-            <input type="submit" name="submit" value="Change password">
-          </div>
-        </form>
-      </section>
+      <?php
+      include('check/reinit_pwd.php');
+        ?>
       <section class="formSection">
         <h2>Delete your account</h2>
         <h4 class="error">
