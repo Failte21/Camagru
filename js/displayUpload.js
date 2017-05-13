@@ -2,7 +2,6 @@ function centerImage(image, canvas, width, height){
   var xPos = (640 - width) / 2;
   var yPos = (480 - height) / 2;
 
-  console.log(width);
   canvas.getContext("2d").drawImage(image, xPos, yPos, width, height);
   canvas.setAttribute("class", "displayed");
 }

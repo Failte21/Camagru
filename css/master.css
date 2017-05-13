@@ -98,6 +98,7 @@ body{
   height: 15px;
   text-align: center;
   color: #EC3434;
+  margin-bottom: 10px;
 }
 
 .clickable:hover{

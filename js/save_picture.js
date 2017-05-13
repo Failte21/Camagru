@@ -32,24 +32,26 @@ function uncheckRadio(){
   }
 }
 
-function reset(canvas){
+function reset(canvas, image){
   var image = document.querySelector("#videoContainer img");
   var button = document.getElementById("clickPicture");
   var saveButton = document.getElementById("saveButtons");
-  var video = document.querySelector("#videoContainer video");
+  if (!image){
+    var video = document.querySelector("#videoContainer video");
+    video.setAttribute("class", "displayed");
+  }
 
   saveButton.setAttribute("class", "hidden");
   canvas.setAttribute("class", "hidden");
   image.setAttribute("class", "hidden");
   button.setAttribute("class", "hidden");
-  video.setAttribute("class", "displayed");
   uncheckRadio();
 }
 
-function save(action){
+function save(action, image){
   var canvas = document.querySelector("#videoContainer canvas");
   if (action == "save"){
     insertPicture(canvas);
   }
-  reset(canvas);
+  reset(canvas, image);
 }

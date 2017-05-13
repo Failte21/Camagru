@@ -3,10 +3,19 @@
     $image = $_SESSION['image'];
     unset($_SESSION['image']);
   }
+  if (isset($_SESSION['uploadError'])){
+    $uploadError = $_SESSION['uploadError'];
+    unset($_SESSION['uploadError']);
+  }
 ?>
 <h1>Hello <?php echo $_SESSION['logged_user'] ?> !</h1>
 <main class="centerContainer" id="mainPage">
   <section id="videoCanvas">
+    <p class="error">
+      <?php if (isset($uploadError)){
+        echo $uploadError;
+      } ?>
+    </p>
     <div id="frameDiv">
       <div id ="videoContainer">
         <?php if (isset($image)){
@@ -24,10 +33,20 @@
           CLICK
         </button>
         <div id="saveButtons" class="hidden">
-          <button type="button" name="save" onclick="save(this.name)">
+          <button type="button" name="save" onclick="save(this.name,
+            <?php if(isset($image)){
+              echo "1";
+            }else{
+              echo "0";
+            }?>)">
             SAVE
           </button>
-          <button type="button" name="unSave" onclick="save(this.name)">
+          <button type="button" name="unSave" onclick="save(this.name,
+            <?php if(isset($image)){
+              echo "1";
+            }else{
+              echo "0";
+            }?>)">
             DON'T SAVE
           </button>
         </div>

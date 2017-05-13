@@ -10,7 +10,6 @@ function showButton(){
 }
 
 function selectFrame(frame){
-  // console.log(frame.value);
   displayFrame(frame.value);
   showButton();
 }
