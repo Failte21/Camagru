@@ -30,7 +30,8 @@
         Pour activer votre compte, veuillez cliquer sur le lien ci dessous
         ou copier/coller dans votre navigateur internet.
 
-        http://localhost:8080/camagru/check/validation.php?login='.urlencode($user->login).'&cle='.urlencode(hash('whirlpool', $user->login.$user->p1)).'
+        http://localhost:8080/camagru/check/validation.php?login='.urlencode($user->login).
+        '&cle='.urlencode(hash('whirlpool', $user->login.$user->p1)).'
 
 
         ---------------

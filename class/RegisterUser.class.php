@@ -22,16 +22,17 @@
     function updatePassword($db, $newPass){
       $newPass = hash('whirlpool', htmlentities($newPass));
       if ($this->connect($db)){
-        $query = $db->prepare('update login set password = ? where login = ?');
-        $query->execute($newPass, $this->login);
-        return (true);
+        $query = $db->prepare('update user set password = ? where login = ?');
+        if ($query->execute(array($newPass, $this->login))){
+          return (true);
+        }else{
+          echo "hello";
+        }
       }
       return (false);
     }
 
     function deleteAccount($db){
-      // if ($db = initDb())
-      // {
         $query = $db->prepare('SELECT password FROM user WHERE login = ?');
         $query->execute(array($this->login));
         $result = $query->fetchAll();
@@ -43,7 +44,6 @@
           }
         }
         return false;
-      //}
     }
   }
 ?>

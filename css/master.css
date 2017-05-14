@@ -1,4 +1,4 @@
-/*@import url(http://fonts.googleapis.com/css?family=Lato);*/
+@import url(http://fonts.googleapis.com/css?family=Lato);
 
 *{
   box-sizing: border-box;
@@ -77,6 +77,10 @@ button:hover{
   text-transform: uppercase;
 }
 
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -90,7 +94,7 @@ body{
   display: flex;
   max-width: 1500px;
   width: 100%;
-  margin: auto;
+  margin: 100px auto 100px auto;
 }
 
 .error{

@@ -1,16 +1,8 @@
-#mainForm .formSection{
+#resetForm .formSection{
   flex: 1;
 }
 
-#mainForm .formSection:nth-child(1){
-  border-right: solid 2px #005F6B;
-}
-
-#mainForm .formSection:nth-child(2){
-  border-left: solid 2px #005F6B;
-}
-
-#mainForm .formSection h2{
+#resetForm .formSection h2{
   width: 100%;
   max-width: 350px;
   margin: 50px auto auto auto;
@@ -19,17 +11,17 @@
   border-bottom: solid #005F6B 2px;
 }
 
-#mainForm .formSection form{
+#resetForm .formSection form{
   width: 100%;
   max-width: 350px;
   margin: auto;
 }
 
-#mainForm .formSection form a{
+#resetForm .formSection form a{
   color: white;
 }
 
-#mainForm .formSection form a:hover{
+#resetForm .formSection form a:hover{
   text-decoration: underline;
 }
 
@@ -56,7 +48,7 @@
   height: 30px;
 }
 
-#mainForm .formSection form input[type="submit"]{
+#resetForm .formSection form input[type="submit"]{
   background-color: #00DFFC;
   color: #005F6B;
   border-color: white;
@@ -75,16 +67,16 @@
 
 @media (max-width: 750px){
 
-  #mainForm{
+  #resetForm{
     flex-direction: column;
   }
 
-  #mainForm .formSection:nth-child(1){
+  #resetForm .formSection:nth-child(1){
     border-right: none;
     border-bottom: solid 2px #005F6B;
   }
 
-  #mainForm .formSection:nth-child(2){
+  #resetForm .formSection:nth-child(2){
     border-left: none;
     border-top: solid 2px #005F6B;
   }

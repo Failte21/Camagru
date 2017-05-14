@@ -19,6 +19,8 @@
       echo "Your password has been updated";
     }else if ($result == "resetSuccess"){
       echo "A mail has been send with a link to reset your password";
+    }else if ($result = "accountDeleted"){
+      echo "Your account has been successfully deleted";
     }else{
       echo "An error occured";
     }

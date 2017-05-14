@@ -17,3 +17,5 @@ function checkResetPassForm(){
     submit.setAttribute("disabled", "disabled");
   }
 }
+
+window.setInterval(checkResetPassForm, 100);

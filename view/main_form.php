@@ -22,13 +22,11 @@
       ?>
       </h4>
       <div class="inputContainer">
-        <input type="text" name="login" placeHolder="Email or Login" required
-          onkeyup="checkSignInForm()">
+        <input type="text" name="login" placeHolder="Email or Login" required>
         <img src="" class="hidden" id="signInLoginIcon">
       </div>
       <div class="inputContainer">
-        <input type="password" name="password" placeHolder="Password" required
-          onkeyup="checkSignInForm()">
+        <input type="password" name="password" placeHolder="Password" required>
         <img src="" class="hidden" id="signInPasswordIcon">
       </div>
       <a href="index.php?page=resetPassword">Password forgotten ?</a>
@@ -48,21 +46,21 @@
     </h4>
     <form action="/camagru2/check/subscribe.php" method="post" id="signUpForm">
         <div class="inputContainer">
-          <input type="text" name="login" placeHolder="Login" required onkeyup="checkSignUpForm()">
+          <input type="text" name="login" placeHolder="Login" required>
           <img src="" class="hidden" id="signUpLoginIcon">
         </div>
         <div class="inputContainer">
-          <input type="email" name="email" placeHolder="Email" required  onkeyup="checkSignUpForm()">
+          <input type="email" name="email" placeHolder="Email" required>
           <img src="" class="hidden" id="signUpEmailIcon">
         </div>
         <div class="inputContainer">
           <input type="password" name="password"
-          placeHolder="Password (8 caracters min)" required onkeyup="checkSignUpForm()">
+          placeHolder="Password (8 caracters min)" required>
           <img src="" class="hidden" id="signUpPasswordIcon">
         </div>
         <div class="inputContainer">
           <input type="password" name="confirm" placeHolder="Confirm password" required
-          onkeyup="checkSignUpForm()" disabled class="unsubmitable">
+          " disabled class="unsubmitable">
           <img src="" class="hidden" id="signUpConfirmIcon">
         </div>
         <div class="inputContainer">

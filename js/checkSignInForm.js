@@ -27,7 +27,7 @@ function checkSignInForm(){
   }
 }
 
-window.setTimeout(function(){
+window.setInterval(function(){
   checkSignInForm();
   checkSignUpForm();
 }, 100);

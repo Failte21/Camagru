@@ -4,7 +4,7 @@
     unset($_SESSION['resetPassError']);
   }
 ?>
-<main class="centerContainer" id="mainForm">
+<main class="centerContainer" id="resetForm">
   <section class="formSection">
     <h2>Reset your password</h2>
     <form action="check/reset_password.php" method="post" id="resetPassForm">
@@ -16,8 +16,7 @@
       ?>
       </h4>
       <div class="inputContainer">
-        <input type="email" name="email" placeHolder="Email" required
-          onkeyup="checkResetPassForm()">
+        <input type="email" name="email" placeHolder="Email" required>
         <img src="" class="hidden" id="ResetPassEmailIcon">
       </div>
       <div class="inputContainer">

@@ -33,7 +33,6 @@
 }
 
 #videoContainer canvas{
-  /*background-color: blue;*/
   z-index: 10000;
 }
 
@@ -43,7 +42,10 @@
   top: 0;
   right: 0;
   z-index: 1;
-  /*-webkit-transform*/
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 

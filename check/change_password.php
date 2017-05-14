@@ -10,17 +10,15 @@
       if ($db = initDb()){
         $user = new RegisterUser($_SESSION['logged_user'], $_POST['oldpwd']);
         if ($user->updatePassword($db, $newpwd)){
-          header('Location: ../index.php?subscribe=passwordChangeSuccess');
+          header("location: ../index.php?subscribe=passwordChangeSuccess");
         }else{
-          header('Location: ../index.php?page=settings&passwordChangeError=wrongPwd');
+          $_SESSION["changePassError"] = "Wrong password";
         }
-      }
-    }else if ($newpwd != $confirm){
-      header('Location: ../index.php?page=settings&passwordChangeError=wrongPwd');
+      }else{
+        $_SESSION["changePassError"] = "An error occured";
     }
   }else{
-    echo "hello";
-    // header('Location: ../index.php');
+    $_SESSION["changePassError"] = "The two passwords must be identicals";
   }
-  // header('Location: ../index.php');
- ?>
+}
+?>

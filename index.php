@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/camagru2/css/footer.css">
     <link rel="stylesheet" href="/camagru2/css/gallery.css">
     <link rel="stylesheet" href="/camagru2/css/comment.css">
+    <link rel="stylesheet" href="/camagru2/css/resetForm.css">
   </head>
   <body>
     <?php
