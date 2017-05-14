@@ -43,7 +43,7 @@
               <img src="<?php echo $this->getLikePicture($l, $elem['id']) ?>" alt="" />
             </button>
             <p></p>
-            <a href="/camagru2/index.php?page=comment&id=<?php echo $elem['id'] ?>">
+            <a href="/camagru/index.php?page=comment&id=<?php echo $elem['id'] ?>">
               <img src="img/icons/comment.png" alt="" />
             </a>
             <?php } ?>

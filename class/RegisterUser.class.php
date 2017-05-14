@@ -45,5 +45,13 @@
         }
         return false;
     }
+
+    function getUserFromKey($db, $key){
+      $query = $db->prepare("select login from user where cle = ?");
+      if ($query->execute(array($key))){
+        $array = $query->fetchAll(PDO::FETCH_ASSOC);
+        $this->login = $array[0]["login"];
+      }
+    }
   }
 ?>

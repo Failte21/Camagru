@@ -17,7 +17,6 @@
       else if (!$user->checkLogin($db))
         $_SESSION['signUpError'] = "login_exists";
       else {
-        echo "hello";
         header("Location: ../index.php?subscribe=success");
         $query = $db->prepare('insert into user(email, password, login, cle) values(:email, :password, :login, :cle)');
         $query->execute(array('email' => $user->mail, 'password' => $user->p1, 'login' => $user->login, 'cle' =>hash('whirlpool', $user->login.$user->p1)));

@@ -8,15 +8,15 @@
   <head>
     <meta charset="utf-8">
     <title>Camagru</title>
-    <link rel="stylesheet" href="/camagru2/css/master.css">
-    <link rel="stylesheet" href="/camagru2/css/header.css">
-    <link rel="stylesheet" href="/camagru2/css/main_form.css">
-    <link rel="stylesheet" href="/camagru2/css/main_page.css">
-    <link rel="stylesheet" href="/camagru2/css/subscribe_success.css">
-    <link rel="stylesheet" href="/camagru2/css/footer.css">
-    <link rel="stylesheet" href="/camagru2/css/gallery.css">
-    <link rel="stylesheet" href="/camagru2/css/comment.css">
-    <link rel="stylesheet" href="/camagru2/css/resetForm.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main_form.css">
+    <link rel="stylesheet" href="css/main_page.css">
+    <link rel="stylesheet" href="css/subscribe_success.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/resetForm.css">
   </head>
   <body>
     <?php

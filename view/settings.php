@@ -17,7 +17,7 @@
           }
         ?>
         </h4>
-        <form  action="/camagru2/check/delete_account.php" method="post">
+        <form  action="check/delete_account.php" method="post">
           <div class="inputContainer">
             <input type="password" name="password" placeHolder="Password" required>
           </div>
@@ -35,7 +35,7 @@
           }
         ?>
         </h4>
-        <form  action="/camagru2/check/change_password.php" method="post">
+        <form  action="check/change_password.php" method="post">
           <div class="inputContainer">
             <input type="password" name="oldpwd" placeHolder="Old password" required>
           </div>

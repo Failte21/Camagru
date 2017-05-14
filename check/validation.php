@@ -12,7 +12,7 @@
       header("Location: ../index.php?subscribe=already_activated");
     }else{
       if ($cle == $clebdd){
-        header("Location: ../index.php/subscribe=activated");
+        header("Location: ../index.php?subscribe=activated");
         $stmt = $db->prepare("UPDATE user SET actif = 1 WHERE login like :login ");
         $stmt->bindParam(':login', $login);
         $stmt->execute();

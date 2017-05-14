@@ -13,7 +13,7 @@
 <main class="centerContainer" id="mainForm">
   <section class="formSection">
     <h2>Log in</h2>
-    <form action="/camagru2/check/login.php" method="post" id="signInForm">
+    <form action="check/login.php" method="post" id="signInForm">
       <h4 class="error">
       <?php
         if (isset($signInError)){
@@ -44,7 +44,7 @@
       }
     ?>
     </h4>
-    <form action="/camagru2/check/subscribe.php" method="post" id="signUpForm">
+    <form action="check/subscribe.php" method="post" id="signUpForm">
         <div class="inputContainer">
           <input type="text" name="login" placeHolder="Login" required>
           <img src="" class="hidden" id="signUpLoginIcon">
