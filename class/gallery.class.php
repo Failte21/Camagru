@@ -10,7 +10,7 @@
       $query = $db->query('select count(*) as total from picture');
       $total = $query->fetchAll();
       $this->nbImages = 0 + ceil($total[0]['total']);
-      $this->nbPages = intval($this->nbImages / $this->imgPerPage + 1);
+      $this->nbPages = $this->nbImages / $this->imgPerPage;
     }
   }
 ?>
