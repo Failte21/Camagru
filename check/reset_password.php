@@ -12,7 +12,7 @@
       $user->sendMail("Reset your password",
       "Click on this link or copy/paste it in your browser to reset your password:
 
-      http://localhost/camagru/check/validationPass.php?key=".urlencode($row['cle'])."
+      http://localhost:8080/camagru/check/validationPass.php?key=".urlencode($row['cle'])."
       ---------------
       Ceci est un mail automatique, Merci de ne pas y répondre.");
       header("location: ../index.php?subscribe=resetSuccess");
