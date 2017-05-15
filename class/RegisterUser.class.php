@@ -19,17 +19,17 @@
         return null;
     }
 
-    function updatePassword($db, $newPass){
-      $newPass = hash('whirlpool', htmlentities($newPass));
-      if ($this->connect($db)){
+    function changePass($db, $newPass){
+        $newPass = hash('whirlpool', htmlentities($newPass));
         $query = $db->prepare('update user set password = ? where login = ?');
         if ($query->execute(array($newPass, $this->login))){
           return (true);
-        }else{
-          echo "hello";
         }
-      }
-      return (false);
+        return (false);
+    }
+
+    function updatePassword($db, $newPass){
+      return ($this->connect($db) && $this->changePass($db, $newPass));
     }
 
     function deleteAccount($db){

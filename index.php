@@ -20,6 +20,15 @@
   </head>
   <body>
     <?php
+      if (isset($_SESSION['login'])){
+        if (isset($_GET['page'])){
+          if (htmlentities($_GET['page']) != "resetPassword"){
+            unset($_SESSION["login"]);
+          }
+        }else{
+          unset($_SESSION['login']);
+        }
+      }
       include("view/header.php");
       include("check/init_db.php");
       include("check/get_page.php");

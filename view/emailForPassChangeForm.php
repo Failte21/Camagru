@@ -15,3 +15,5 @@
   </div>
   <a href="index.php">Back to the form</a>
 </form>
+<script type="text/javascript" src="js/formChecking.js"></script>
+<script type="text/javascript" src="js/checkResetPass.js"></script>
