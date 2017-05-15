@@ -36,7 +36,7 @@ function reset(canvas, image){
   var image = document.querySelector("#videoContainer img");
   var button = document.getElementById("clickPicture");
   var saveButton = document.getElementById("saveButtons");
-  if (!image){
+  if (image){
     var video = document.querySelector("#videoContainer video");
     video.setAttribute("class", "displayed");
   }
