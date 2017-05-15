@@ -40,6 +40,8 @@
           if ($elem['password'] == $this->p1){
             $d_query = $db->prepare('delete from user where login = ?');
             $d_query->execute(array($this->login));
+            $d_query = $db->prepare('DELETE FROM picture WHERE login_user = ?');
+            $d_query->execute(array($this->login));
             return true;
           }
         }
