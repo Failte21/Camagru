@@ -1,0 +1,4 @@
+AuthName "Protected page"
+AuthType Basic
+AuthUserFile "/opt/lampp/htdocs/camagru/config/.htpasswd"
+Require valid-user

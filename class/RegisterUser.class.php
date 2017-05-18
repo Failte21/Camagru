@@ -42,6 +42,10 @@
             $d_query->execute(array($this->login));
             $d_query = $db->prepare('DELETE FROM picture WHERE login_user = ?');
             $d_query->execute(array($this->login));
+            $d_query = $db->prepare('DELETE FROM like_picture WHERE login_like = ?');
+            $d_query->execute(array($this->login));
+            $d_query = $db->prepare('DELETE FROM comment_picture WHERE login_comment = ?');
+            $d_query->execute(array($this->login));
             return true;
           }
         }

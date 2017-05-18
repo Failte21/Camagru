@@ -20,6 +20,7 @@
         <form  action="check/delete_account.php" method="post">
           <div class="inputContainer">
             <input type="password" name="password" placeHolder="Password" required>
+            <img src="" alt="" id="deletePassIcon"/>
           </div>
           <div class="inputContainer">
             <input type="submit" name="submit" value="Delete account">
@@ -38,13 +39,16 @@
         <form  action="check/change_password.php" method="post">
           <div class="inputContainer">
             <input type="password" name="oldpwd" placeHolder="Old password" required>
+            <img src="" alt="" id="oldPassIcon"/>
           </div>
           <div class="inputContainer">
             <input type="password" name="newpwd" placeHolder="New password" required>
+            <img src="" alt="" id="newPassIcon"/>
           </div>
           <div class="inputContainer">
             <input type="password" name="confirmation"
             placeHolder="Confirm the new password" required>
+            <img src="" alt="" id="confirmIcon"/>
           </div>
           <div class="inputContainer">
             <input type="submit" name="submit" value="Update your password">
@@ -55,3 +59,6 @@
     <?php
   }
 ?>
+<script type="text/javascript" src="js/formChecking.js"></script>
+<script type="text/javascript" src="js/checkDeleteAccountForm.js"></script>
+<script type="text/javascript" src="js/checkChangePass.js"></script>
