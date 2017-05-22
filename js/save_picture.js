@@ -39,11 +39,13 @@ function uncheckRadio(){
   }
 }
 
-function reset(canvas, image, action){
+function reset(canvas, action, type){
   var image = document.querySelector("#videoContainer img");
   var button = document.getElementById("clickPicture");
   var saveButton = document.getElementById("saveButtons");
-  if (image){
+  if (type){
+    location.reload();
+  }else{
     var video = document.querySelector("#videoContainer video");
     video.setAttribute("class", "displayed");
   }
@@ -64,5 +66,5 @@ function save(action, image){
   if (action == "save"){
     insertPicture(canvas);
   }
-  reset(canvas, image, action);
+  reset(canvas, action, image);
 }

@@ -7,6 +7,7 @@ function displayPicture(action){
     width = -width;
     ctx.scale(-1, 1);
     ctx.drawImage(toDraw, 0, 0, width, 480);
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
   }else{
     var toDraw = document.querySelector("#videoContainer img");
     ctx.drawImage(toDraw, 0, 0);

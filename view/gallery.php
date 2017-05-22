@@ -7,7 +7,7 @@
   include("class/picture.class.php");
   include("class/page.class.php");
   if ($db = initDb()){
-    if (htmlentities($_GET['page'] == 'gallery')){
+    if (htmlentities($_GET['page']) == 'gallery'){
       $gallery = new Gallery($db, 6);
       $page = new Page($db, htmlentities($_GET['pageNb']), $gallery->imgPerPage);
       $page->displayImg($db, null);

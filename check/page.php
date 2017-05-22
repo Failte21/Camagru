@@ -5,9 +5,11 @@ if ($db = initDb()){
   $imagePerPage = 6;
   $nbPage = ceil($total[0]['total'] / $imagePerPage);
   if (isset($_GET['page'])){
-    $current = intval($_GET['page']);
+    $page = htmlentities($_GET['page']);
+    $current = intval($page);
+
     if ($current > $nbPage){
-      $current = $nbPage;
+      $current = 1;
     }
   }
   else{
