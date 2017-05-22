@@ -1,3 +1,10 @@
+function lockRadios(){
+  var radios = document.getElementsByClassName("frame_radio");
+  for (i = 0; i < radios.length; i++){
+    radios.disabled = true;
+  }
+}
+
 function getFrameName(){
   var radios = document.getElementsByClassName("frame_radio");
   for (i = 0; i < radios.length; i++){
@@ -32,7 +39,7 @@ function uncheckRadio(){
   }
 }
 
-function reset(canvas, image){
+function reset(canvas, image, action){
   var image = document.querySelector("#videoContainer img");
   var button = document.getElementById("clickPicture");
   var saveButton = document.getElementById("saveButtons");
@@ -45,7 +52,11 @@ function reset(canvas, image){
   canvas.setAttribute("class", "hidden");
   image.setAttribute("class", "hidden");
   button.setAttribute("class", "hidden");
-  uncheckRadio();
+  if (action == "save"){
+    lockRadios();
+  }else{
+    uncheckRadio();
+  }
 }
 
 function save(action, image){
@@ -53,5 +64,5 @@ function save(action, image){
   if (action == "save"){
     insertPicture(canvas);
   }
-  reset(canvas, image);
+  reset(canvas, image, action);
 }

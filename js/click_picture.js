@@ -5,7 +5,7 @@ function displayPicture(action){
   if (!action){
     var toDraw = document.querySelector("#videoContainer video");
     width = -width;
-    ctx.scale(-1, 1)
+    ctx.scale(-1, 1);
     ctx.drawImage(toDraw, 0, 0, width, 480);
   }else{
     var toDraw = document.querySelector("#videoContainer img");

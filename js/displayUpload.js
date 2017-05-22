@@ -40,4 +40,5 @@ function getImgSize(image) {
 window.onload = function(){
   var image = document.querySelector("#videoContainer img");
   getImgSize(image);
+  enableRadios();
 }

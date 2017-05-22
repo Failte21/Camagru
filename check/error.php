@@ -2,7 +2,7 @@
   function getError($error)
   {
     if ($error == "mail_exists")
-      return ("This mail already exists");
+      return ("This mail already exist");
     else if ($error == "different_passwd")
       return ("The two passwords must be identical");
     else if ($error == "login_exists")

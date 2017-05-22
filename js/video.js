@@ -1,3 +1,4 @@
+
 window.onload = function(){
   var streaming = false;
   var video = document.querySelector('#videoContainer video');
@@ -30,3 +31,5 @@ window.onload = function(){
     }
   }, false);
 }
+
+window.setTimeout(enableRadios, 1000);
