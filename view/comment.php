@@ -2,15 +2,16 @@
 <?php
   include("class/comment.class.php");
   if ($db = initDb()){
+    $id = htmlentities($_GET["id"]);
     $query = $db->prepare('SELECT img FROM picture WHERE id = ?');
-    $query->execute(array(htmlentities($_GET['id'])));
+    $query->execute(array($id));
     $array = $query->fetchAll();
 ?>
   <div class="comment_img">
     <img src="<?php echo $array[0]['img'] ?>" alt="photo" />
   </div>
   <div class="container">
-    <form action="check/comment.php?id=<?php echo htmlentities($_GET['id']);?>" method="post">
+    <form action="check/comment.php?id=<?php echo $id;?>" method="post">
       <label>
         <textarea name="msg" placeholder="Comment" rows="7"></textarea>
       </label>
@@ -18,8 +19,8 @@
     </form>
 <?php
   }
-  $com = new Comment();
-  $result = $com->display($_GET['id']);
+  $com = new Comment($id, $elem['login_comment'], $elem['comment']);
+  $result = $com->display();
   foreach ($result as $elem){
   ?>
     <div class="dialogbox">

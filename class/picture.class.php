@@ -55,7 +55,7 @@ Class Picture{
         $nb_like = $this->nb_like($id_pictur0e);
         $nb_like++;
         $this->update($id_picture, $login, 1, $nb_like);
-        $this->notification($id_picture, $login);
+        // $this->notification($id_picture, $login);
       }
     }
   }

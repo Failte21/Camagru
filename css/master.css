@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato);
+/*@import url(http://fonts.googleapis.com/css?family=Lato);*/
 
 *{
   box-sizing: border-box;
@@ -123,4 +123,9 @@ body{
 
 .unclickable + label{
   opacity: 0.3;
+}
+
+#emptyGallery{
+  color: #00DFFC;
+  font-size: 1.3em;
 }

@@ -44,7 +44,9 @@ function reset(canvas, action, type){
   var button = document.getElementById("clickPicture");
   var saveButton = document.getElementById("saveButtons");
   if (type){
-    location.reload();
+    if (action != "save"){
+      location.reload();
+    }
   }else{
     var video = document.querySelector("#videoContainer video");
     video.setAttribute("class", "displayed");

@@ -63,6 +63,11 @@
         $query->execute(array($this->firstPicture, $this->imagePerPage));
       }
       $array = $query->fetchAll();
+      if (!count($array)){
+        ?>
+          <h4 class="error" id="emptyGallery">The gallery is empty</h4>
+        <?php
+      }
       foreach($array as $elem){ ?>
         <div class="galleryImgCanvas">
           <?php
